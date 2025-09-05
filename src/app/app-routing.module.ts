@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClientesFormComponent } from './modules/clientes/clientes-form/clientes-form.component';
 import { VendedoresVistaComponent } from './modules/vendedor/vendedores-vista/vendedores-vista.component';
 import { ProductosVistaComponent } from './modules/productos/productos-vista/productos-vista.component';
+import { VentasVistaComponent } from './modules/ventas/ventas-vista/ventas-vista.component';
+import { ZonasVistaComponent } from './modules/zonas/zonas-vista/zonas-vista.component';
 
 const routes: Routes = [
   
@@ -19,8 +21,12 @@ const routes: Routes = [
           component: ProductosVistaComponent,
         },
         {
-          path: 'clientes',
-          component: ClientesFormComponent,
+          path: 'ventas',
+          component: VentasVistaComponent,
+        },
+        {
+          path: 'zonas',
+          component: ZonasVistaComponent,
         },
 ];
 
