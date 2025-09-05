@@ -28,6 +28,10 @@ const routes: Routes = [
           path: 'zonas',
           component: ZonasVistaComponent,
         },
+        {
+          path: 'reportes',
+          component: VentasVistaComponent,
+        },
 ];
 
 @NgModule({
