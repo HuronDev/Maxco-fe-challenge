@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VendedoresVistaComponent } from './vendedores-vista/vendedores-vista.component';
+import { ProductosVistaComponent } from './productos-vista/productos-vista.component';
 import { SharedModule } from '../../Shared/shared.module';
 
 
 
 @NgModule({
-  declarations: [
-    VendedoresVistaComponent
-  ],
+  declarations: [ProductosVistaComponent],
   imports: [
     CommonModule,
     SharedModule,
   ]
 })
-export class VendedoresModule { }
+export class ProductosModule { }
