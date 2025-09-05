@@ -1,0 +1,43 @@
+.clientes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; // menos espacio debajo del header
+
+  h2 {
+    color: #00796b;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  button {
+    font-weight: bold;
+  }
+}
+
+.clientes-table {
+  margin-top: 5px; // menos separación arriba
+  border-radius: 6px;
+  overflow: hidden;
+
+  .p-datatable-thead > tr > th {
+    background-color: #e0f2f1;
+    color: #004d40;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px; // menos padding que antes
+  }
+
+  .p-datatable-tbody > tr > td {
+    font-size: 0.95rem;
+    color: #333;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 4px; // menos padding para que la tabla sea más compacta
+  }
+
+  .p-button-rounded {
+    min-width: 2rem;
+    height: 2rem;
+  }
+}

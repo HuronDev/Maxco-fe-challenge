@@ -1,0 +1,56 @@
+/* Fondo de toda la app */
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: #ffe6e6; // fondo rojo muy suave
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center; // centra todo horizontalmente
+}
+
+/* Header / título */
+.app-title {
+  color: #c85454; // rojo más intenso
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1.2px;
+  margin: 0 auto 0px auto; // centrado horizontalmente
+  display: inline-block;
+}
+.app-toolbar {
+  background-color: #ffe6e6; // tu rojo muy suave
+  color: #c85454; // texto rojo más intenso
+}
+
+/* Navbar */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5; // color más suave que blanco
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // sombra debajo
+  padding: 10px 0;
+  margin: 0 50px; // separación de los bordes
+
+  button {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555; // gris oscuro suave
+    transition: all 0.3s ease;
+    border-radius: 4px;
+
+    &:hover, &.active {
+      background-color: #ffcdd2; // rojo suave al pasar el mouse
+      color: #b71c1c;            // rojo más intenso en el texto
+    }
+  }
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
