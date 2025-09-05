@@ -1,0 +1,35 @@
+/* Formulario */
+.zonas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  button {
+    font-weight: bold;
+  }
+}
+
+.p-fluid .p-field {
+  margin-bottom: 1rem;
+}
+
+/* Tabla */
+.p-datatable-thead > tr > th {
+  background-color: #e0f2f1;
+  color: #004d40;
+  font-weight: 600;
+  text-align: center;
+}
+
+.p-datatable-tbody > tr > td {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.p-button-rounded {
+  min-width: 2.5rem;
+  height: 2.5rem;
+}

@@ -19,6 +19,7 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ProductosModule } from './modules/productos/productos.module';
+import { ZonasModule } from './modules/zonas/zonas.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ProductosModule } from './modules/productos/productos.module';
     SharedModule,    
     ClientesModule,
     ProductosModule,
+    ZonasModule,
     CommonModule,
     MatDialogModule,
     InputTextModule,
