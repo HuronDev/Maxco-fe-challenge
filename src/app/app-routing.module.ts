@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientesFormComponent } from './modules/clientes/clientes-form/clientes-form.component';
 import { VendedoresVistaComponent } from './modules/vendedor/vendedores-vista/vendedores-vista.component';
+import { ProductosVistaComponent } from './modules/productos/productos-vista/productos-vista.component';
 
 const routes: Routes = [
   
@@ -14,8 +15,8 @@ const routes: Routes = [
           component: VendedoresVistaComponent,
         },
         {
-          path: 'clientes',
-          component: ClientesFormComponent,
+          path: 'productos',
+          component: ProductosVistaComponent,
         },
         {
           path: 'clientes',
