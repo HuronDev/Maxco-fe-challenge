@@ -1,1 +1,29 @@
-<p>zonas-vista works!</p>
+<div class="zonas-header">
+  <button pButton label="Crear Nuevo" icon="pi pi-plus" (click)="openNew()"></button>
+</div>
+
+<p-table [value]="zonas" [paginator]="true" [rows]="5" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Acciones</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-zona>
+    <tr>
+      <td>{{ zona.nombre }}</td>
+      <td>{{ zona.descripcion }}</td>
+      <td>
+        <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-text" (click)="editZona(zona)"></button>
+        <button pButton icon="pi pi-trash" class="p-button-rounded p-button-danger p-button-text" (click)="deleteZona(zona)"></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-dialog header="Zona" [(visible)]="formVisible" [modal]="true" [closable]="true" [style]="{width: '400px'}">
+  <app-zonas-form [zona]="selectedZona" (formSubmit)="onFormSubmit()"></app-zonas-form>
+</p-dialog>
+
+<p-toast></p-toast>
