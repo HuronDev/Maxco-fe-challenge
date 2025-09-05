@@ -1,0 +1,34 @@
+<div class="clientes-header">
+  <button pButton label="Crear Nuevo" icon="pi pi-plus" (click)="openNew()"></button>
+</div>
+
+<p-table [value]="clientes" [paginator]="true" [rows]="5" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Teléfono</th>
+      <th>Dirección</th>
+      <th>Acciones</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-cliente>
+    <tr>
+      <td>{{ cliente.nombre }}</td>
+      <td>{{ cliente.email }}</td>
+      <td>{{ cliente.telefono }}</td>
+      <td>{{ cliente.direccion }}</td>
+      <td>
+        <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-text" (click)="editCliente(cliente)"></button>
+        <button pButton icon="pi pi-trash" class="p-button-rounded p-button-danger p-button-text" (click)="deleteCliente(cliente)"></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-dialog header="Cliente" [(visible)]="formVisible" [modal]="true" [closable]="true" [style]="{width: '400px'}">
+  <app-clientes-form [cliente]="selectedCliente" (formSubmit)="onFormSubmit()"></app-clientes-form>
+</p-dialog>
+
+<p-toast></p-toast>

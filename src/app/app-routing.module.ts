@@ -5,12 +5,13 @@ import { VendedoresVistaComponent } from './modules/vendedor/vendedores-vista/ve
 import { ProductosVistaComponent } from './modules/productos/productos-vista/productos-vista.component';
 import { VentasVistaComponent } from './modules/ventas/ventas-vista/ventas-vista.component';
 import { ZonasVistaComponent } from './modules/zonas/zonas-vista/zonas-vista.component';
+import { ClientesListComponent } from './modules/clientes/clientes-list/clientes-list.component';
 
 const routes: Routes = [
   
         {
           path: 'clientes',
-          component: ClientesFormComponent,
+          component: ClientesListComponent,
         },
         {
           path: 'vendedores',

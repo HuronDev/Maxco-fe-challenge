@@ -5,12 +5,19 @@ import { AppComponent } from './app.component';
 import { ProductosVistaComponent } from './modules/productos/productos-vista/productos-vista.component';
 import { VentasVistaComponent } from './modules/ventas/ventas-vista/ventas-vista.component';
 import { ZonasVistaComponent } from './modules/zonas/zonas-vista/zonas-vista.component';
-import { NavbarComponent } from './modules/header/navbar/navbar.component';
 
 // Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { SharedModule } from './Shared/shared.module';
+import { ClientesModule } from './modules/clientes/clientes.module';
+import { CommonModule } from '@angular/common';
+import { MatDialogModule } from '@angular/material/dialog';
+import { InputText, InputTextModule } from 'primeng/inputtext';
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +28,15 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule, 
     MatToolbarModule,      
-    MatButtonModule          
+    MatButtonModule  ,
+    SharedModule,    
+    ClientesModule,
+    CommonModule,
+    MatDialogModule,
+    InputTextModule,
+    HttpClientModule,
+    TableModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,8 +16,12 @@
   font-weight: 700;
   text-align: center;
   letter-spacing: 1.2px;
-  margin: 0 auto 20px auto; // centrado horizontalmente
+  margin: 0 auto 0px auto; // centrado horizontalmente
   display: inline-block;
+}
+.app-toolbar {
+  background-color: #ffe6e6; // tu rojo muy suave
+  color: #c85454; // texto rojo más intenso
 }
 
 /* Navbar */
