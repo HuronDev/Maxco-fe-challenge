@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClientesFormComponent } from './modules/clientes/clientes-form/clientes-form.component';
 import { VendedoresVistaComponent } from './modules/vendedor/vendedores-vista/vendedores-vista.component';
 import { ProductosVistaComponent } from './modules/productos/productos-vista/productos-vista.component';
 import { VentasVistaComponent } from './modules/ventas/ventas-vista/ventas-vista.component';

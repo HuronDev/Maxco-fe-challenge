@@ -18,6 +18,7 @@ import { InputText, InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ProductosModule } from './modules/productos/productos.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatButtonModule  ,
     SharedModule,    
     ClientesModule,
+    ProductosModule,
     CommonModule,
     MatDialogModule,
     InputTextModule,
