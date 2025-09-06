@@ -1,0 +1,104 @@
+<form [formGroup]="ventaForm" (ngSubmit)="submit()" class="ventas-form p-fluid">
+  <!-- Cliente -->
+  <div class="p-field">
+    <label for="clienteId">Cliente</label>
+    <p-dropdown
+      [options]="clientes"
+      optionLabel="nombre"
+      optionValue="id"
+      placeholder="Seleccione un cliente"
+      formControlName="clienteId"
+      [filter]="true"
+    ></p-dropdown>
+  </div>
+
+  <!-- Vendedor -->
+  <div class="p-field">
+    <label for="vendedorId">Vendedor</label>
+    <p-dropdown
+      [options]="vendedores"
+      optionLabel="nombre"
+      optionValue="id"
+      placeholder="Seleccione un vendedor"
+      formControlName="vendedorId"
+      [filter]="true"
+    ></p-dropdown>
+  </div>
+
+  <!-- Zona -->
+  <div class="p-field">
+    <label for="zonaId">Zona</label>
+    <p-dropdown
+      [options]="zonas"
+      optionLabel="nombre"
+      optionValue="id"
+      placeholder="Seleccione una zona"
+      formControlName="zonaId"
+      [filter]="true"
+    ></p-dropdown>
+  </div>
+
+  <!-- Fecha -->
+  <div class="p-field">
+    <label for="fecha">Fecha</label>
+    <input id="fecha" type="date" pInputText formControlName="fecha" />
+  </div>
+
+  <!-- Detalles de Productos -->
+  <div formArrayName="detalles" class="detalles">
+    <p-table [value]="detalles.controls" [autoLayout]="true">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Acciones</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-row let-i="rowIndex">
+        <tr [formGroupName]="i">
+          <td>
+            <p-dropdown
+              [options]="productos"
+              optionLabel="nombre"
+              optionValue="id"
+              placeholder="Seleccione un producto"
+              formControlName="productoId"
+              [filter]="true"
+              [showClear]="true"
+              appendTo="body"
+            ></p-dropdown>
+          </td>
+          <td>
+            <input
+              type="number"
+              pInputText
+              formControlName="cantidad"
+              placeholder="Cantidad"
+            />
+          </td>
+          <td>
+            <button
+              type="button"
+              pButton
+              icon="pi pi-trash"
+              class="p-button-rounded p-button-danger p-button-text"
+              (click)="removeDetalle(i)"
+            ></button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+
+    <button
+      type="button"
+      pButton
+      label="Agregar Producto"
+      icon="pi pi-plus"
+      class="p-mt-2"
+      (click)="addDetalle()"
+    ></button>
+  </div>
+
+  <button type="submit" pButton label="Guardar Venta" class="p-mt-3"></button>
+</form>

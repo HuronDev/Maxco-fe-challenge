@@ -1,1 +1,41 @@
-<p>ventas-vista works!</p>
+<div class="ventas-header">
+  <button pButton label="Crear Venta" icon="pi pi-plus" (click)="openNew()"></button>
+</div>
+
+<p-table [value]="ventas" [paginator]="true" [rows]="5" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Cliente</th>
+      <th>Vendedor</th>
+      <th>Zona</th>
+      <th>Fecha</th>
+      <th>Producto</th>
+      <th>Cantidad</th>
+      <th>Precio Unitario</th>
+      <th>Subtotal</th>
+      <th>Acciones</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-detalle>
+    <tr>
+      <td>{{ detalle.cliente }}</td>
+      <td>{{ detalle.vendedor }}</td>
+      <td>{{ detalle.zona }}</td>
+      <td>{{ detalle.fecha }}</td>
+      <td>{{ detalle.producto }}</td>
+      <td>{{ detalle.cantidad }}</td>
+      <td>{{ detalle.precio_unitario | currency }}</td>
+      <td>{{ detalle.subtotal | currency }}</td>
+      <td>
+        <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-text" (click)="editCantidad(detalle, detalle.ventaId)"></button>
+        <button pButton icon="pi pi-trash" class="p-button-rounded p-button-danger p-button-text" (click)="deleteVenta(detalle.ventaId)"></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-dialog header="Venta" [(visible)]="formVisible" [modal]="true" [closable]="true" [style]="{width: '600px'}">
+  <app-ventas-form [venta]="selectedVenta" (formSubmit)="onFormSubmit()"></app-ventas-form>
+</p-dialog>
+
+<p-toast></p-toast>

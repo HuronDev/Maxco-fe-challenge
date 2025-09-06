@@ -5,6 +5,7 @@ import { ProductosVistaComponent } from './modules/productos/productos-vista/pro
 import { VentasVistaComponent } from './modules/ventas/ventas-vista/ventas-vista.component';
 import { ZonasVistaComponent } from './modules/zonas/zonas-vista/zonas-vista.component';
 import { ClientesListComponent } from './modules/clientes/clientes-list/clientes-list.component';
+import { ReportesComponent } from './modules/reportes/reportes/reportes.component';
 
 const routes: Routes = [
   
@@ -30,7 +31,7 @@ const routes: Routes = [
         },
         {
           path: 'reportes',
-          component: VentasVistaComponent,
+          component: ReportesComponent,
         },
 ];
 

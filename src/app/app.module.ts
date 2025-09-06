@@ -20,6 +20,8 @@ import { ButtonModule } from 'primeng/button';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ProductosModule } from './modules/productos/productos.module';
 import { ZonasModule } from './modules/zonas/zonas.module';
+import { VentasModule } from './modules/ventas/ventas.module';
+import { ReportesModule } from './modules/reportes/reportes.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ZonasModule } from './modules/zonas/zonas.module';
     ClientesModule,
     ProductosModule,
     ZonasModule,
+    VentasModule,
+    ReportesModule,
     CommonModule,
     MatDialogModule,
     InputTextModule,
