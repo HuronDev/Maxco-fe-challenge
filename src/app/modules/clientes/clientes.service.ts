@@ -15,7 +15,7 @@ export interface Cliente {
   providedIn: "root",
 })
 export class ClientesService {
-  private apiUrl = "http://localhost:3000/clientes"; // ajusta tu backend
+  private apiUrl = "https://maxco-be-challenge.onrender.com/clientes"; // ajusta tu backend
 
   constructor(private http: HttpClient) {}
 

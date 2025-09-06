@@ -16,7 +16,7 @@ export interface Producto {
   providedIn: 'root',
 })
 export class ProductosService {
-  private apiUrl = 'http://localhost:3000/productos'; // Cambiar según tu backend
+  private apiUrl = 'https://maxco-be-challenge.onrender.com/productos'; // Cambiar según tu backend
 
   constructor(private http: HttpClient) {}
 

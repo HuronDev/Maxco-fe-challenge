@@ -13,7 +13,7 @@ export interface Zona {
   providedIn: 'root',
 })
 export class ZonasService {
-  private apiUrl = 'http://localhost:3000/zonas'; 
+  private apiUrl = 'https://maxco-be-challenge.onrender.com/zonas'; 
 
   constructor(private http: HttpClient) {}
 

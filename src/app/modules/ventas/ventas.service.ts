@@ -31,11 +31,11 @@ export interface UpdateCantidadDto {
   providedIn: 'root',
 })
 export class VentasService {
-  private apiUrl = 'http://localhost:3000/ventas';
-  private apiClientes = 'http://localhost:3000/clientes';
-  private apiVendedores = 'http://localhost:3000/vendedores';
-  private apiZonas = 'http://localhost:3000/zonas';
-  private apiProductos = 'http://localhost:3000/productos';
+  private apiUrl = 'https://maxco-be-challenge.onrender.com/ventas';
+  private apiClientes = 'https://maxco-be-challenge.onrender.com/clientes';
+  private apiVendedores = 'https://maxco-be-challenge.onrender.com/vendedores';
+  private apiZonas = 'https://maxco-be-challenge.onrender.com/zonas';
+  private apiProductos = 'https://maxco-be-challenge.onrender.com/productos';
 
   constructor(private http: HttpClient) {}
 

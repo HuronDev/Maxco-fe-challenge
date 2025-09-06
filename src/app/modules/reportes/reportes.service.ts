@@ -6,7 +6,7 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class VentasService {
-  private apiUrl = 'http://localhost:3000/ventas';
+  private apiUrl = 'https://maxco-be-challenge.onrender.com/ventas';
 
   constructor(private http: HttpClient) {}
 
