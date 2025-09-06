@@ -1,0 +1,76 @@
+<div class="reportes">
+
+  <div class="botones">
+  <button
+    pButton
+    [ngClass]="{ activo: isSelected('zonasConMasVentas') }"
+    label="Zonas con más ventas por vendedor"
+    (click)="seleccionarReporte('zonasConMasVentas')"
+  ></button>
+
+  <button
+    pButton
+    [ngClass]="{ activo: isSelected('zonasSinVentas') }"
+    label="Zonas sin ventas"
+    (click)="seleccionarReporte('zonasSinVentas')"
+  ></button>
+
+  <button
+    pButton
+    [ngClass]="{ activo: isSelected('vendedoresSinVentas') }"
+    label="Vendedores sin ventas"
+    (click)="seleccionarReporte('vendedoresSinVentas')"
+  ></button>
+
+  <button
+    pButton
+    [ngClass]="{ activo: isSelected('ventasPorClientePorAño') }"
+    label="Ventas por cliente por año"
+    (click)="seleccionarReporte('ventasPorClientePorAño')"
+  ></button>
+</div>
+
+
+  <!-- Fechas -->
+  <div *ngIf="reporteSeleccionado === 'zonasSinVentas' || reporteSeleccionado === 'vendedoresSinVentas'" class="filtros">
+    <label>Fecha Inicio:</label>
+    <input type="date" [(ngModel)]="fechaInicio" />
+    <label>Fecha Fin:</label>
+    <input type="date" [(ngModel)]="fechaFin" />
+    <button pButton label="Generar" (click)="generarReporte()"></button>
+  </div>
+
+  <!-- Años -->
+  <div *ngIf="reporteSeleccionado === 'ventasPorClientePorAño'" class="filtros">
+    
+    <input
+      type="text"
+      (change)="onChangeAnios($any($event.target)?.value)"
+      placeholder="Ej: 2023,2024"
+    />
+    <button pButton label="Generar" (click)="generarReporte()"></button>
+  </div>
+
+  <!-- Reporte simple -->
+  <div *ngIf="reporteSeleccionado === 'zonasConMasVentas'">
+    <button pButton label="Generar" (click)="generarReporte()"></button>
+  </div>
+
+  <!-- Tabla resultados -->
+  <p-table *ngIf="resultados.length > 0" [value]="resultados">
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let col of columnas">{{ col.header }}</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-row>
+      <tr>
+        <td *ngFor="let col of columnas">
+          {{ col.field.includes('.') ? getNested(row, col.field) : row[col.field] }}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <p-toast></p-toast>
+</div>

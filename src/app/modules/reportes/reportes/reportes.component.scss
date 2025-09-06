@@ -1,0 +1,82 @@
+.reportes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  .botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+
+    button {
+      background-color: #ffffff;
+      color: #000000;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+
+      &.activo {
+        border: 2px solid #1976d2; // azul que combina
+        background-color: #e3f2fd; // azul clarito
+        color: #1976d2;
+      }
+    }
+  }
+
+  .filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+    label {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+
+    input {
+      padding: 0.4rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #1976d2;
+      color: #fff;
+      border-radius: 8px;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #115293;
+      }
+    }
+  }
+
+  p-table {
+    margin-top: 1rem;
+    width: 100%;
+
+    .p-datatable-thead > tr > th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+      color: #333;
+    }
+  }
+}
+
+p-toast {
+  z-index: 1200;
+}

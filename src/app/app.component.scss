@@ -2,7 +2,7 @@
 :host {
   display: block;
   min-height: 100vh;
-  background-color: #b39d9d; 
+  background-color: #7b8db9; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
@@ -20,8 +20,8 @@
   display: inline-block;
 }
 .app-toolbar {
-  background-color: #b39d9d; 
-  color: #c85454; 
+  background-color: #7a94b5; 
+  color: #62a6ab; 
 }
 
 /* Navbar */
@@ -42,8 +42,8 @@
     border-radius: 4px;
 
     &:hover, &.active {
-      background-color: #ffcdd2; // rojo suave al pasar el mouse
-      color: #b71c1c;            // rojo más intenso en el texto
+      background-color: #aaf5f9; // rojo suave al pasar el mouse
+      color: #01031d;            // rojo más intenso en el texto
     }
   }
 }
